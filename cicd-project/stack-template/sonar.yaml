@@ -17,17 +17,17 @@ Parameters:
 Mappings:
   AmiRegionMap:
     us-east-1:
-      AMI: ami-0bcc094591f354be2 
+      AMI: ami-0bcc*********
     us-east-2:
-      AMI: ami-0bbe28eb2173f6167
+      AMI: ami-0bbe2*********
     eu-west-1:
-      AMI: ami-0ea3405d2d2522162
+      AMI: ami-0ea340*********
     us-west-1:
-      AMI: ami-0dd005d3eb03f66e8
+      AMI: ami-0dd005*********
     ap-south-1:
-      AMI: ami-02b5fbc2cb28b77b8 
+      AMI: ami-02b5f*********
     us-west-2:
-      AMI: ami-0a634ae95e11c6f91 
+      AMI: ami-0a634*******
 Resources:
   SonarInst:
     Type: 'AWS::EC2::Instance'

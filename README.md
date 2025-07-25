@@ -1,7 +1,5 @@
 # ☁️ Cloud-Formation-AWS
 
-Hi there! 👋 I'm excited to share my hands-on journey with AWS CloudFormation. Throughout this project, I rolled up my sleeves and built, tested, and deployed a variety of templates to deepen my understanding of AWS infrastructure and DevOps best practices. Here’s a look at what I’ve accomplished and how you can follow along or use these resources for your own learning!
-
 ---
 
 ## 📚 Table of Contents
@@ -38,7 +36,58 @@ This section is where I got my hands dirty with the fundamentals of CloudFormati
 
 ---
 
+## ❗ Problem
+- High cost in maintaining servers with storage
+- Backup through AMI increases storage cost
+- Manual setup is time-consuming
+- Chances of human error
+
+---
+
+## 💡 Solution
+- CloudFormation is the ideal tool to automate AWS stacks
+- Automatic setup (NO human errors)
+- Maintains state of infrastructure
+- Version control (IaC)
+- Repeatable and reusable
+
+---
+
+## 🛠️ Technologies
+- **AWS CloudFormation**: Configuration management for AWS infrastructure
+- **AWS Cloud Platform**: Complete infrastructure setup and maintenance
+
+---
+
+## 🔁 Flow of Execution
+1. Check CI/CD data on S3 bucket.
+2. Note down bucket name and filenames.
+3. Create an S3 bucket to upload templates; create a folder named `stack-template`.
+4. Note down the bucket name and folder name.
+5. Create a key pair.
+6. Write the root template named `cicdtemp.yaml`.
+7. Write all child templates:
+    - `cicds3role.yaml`
+    - `jenk.yaml`
+    - `nexus.yaml`
+    - `sonar.yaml`
+    - `wintest.yaml`
+    - `app01qa.yaml`
+    - `db01qa.yaml`
+8. Update the root template with child template paths.
+9. Upload all child templates to the S3 bucket in the `stack-template` folder.
+10. Create a nested stack using `cicdtemp.yaml`.
+
+---
+
 ## 🔄 CI/CD Project
+
+### 📢 About Project
+- CI/CD Stack Setup or Restore on AWS
+- Jenkins, Nexus, SonarQube, Windows server, app & db
+- Project is to help you do R&D on CI/CD
+- Similar concepts in Real World Projects
+
 After mastering the basics, I challenged myself to build a complete CI/CD stack using nested CloudFormation templates. Here’s how I broke it down:
 
 - **cicdtemp.yaml**: I orchestrated the creation of all my CI/CD resources using nested stacks.
